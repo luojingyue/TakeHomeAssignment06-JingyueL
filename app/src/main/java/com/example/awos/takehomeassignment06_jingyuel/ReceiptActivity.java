@@ -24,8 +24,8 @@ public class ReceiptActivity extends AppCompatActivity {
         tipPercentage=intent.getDoubleExtra("tip",0);
         total=amount*(1+taxPercentage+tipPercentage);
         finalMessage="Total: "+amount;
-        finalMessage+="\nSales Tax:"+taxPercentage;
-        finalMessage+="\nTip: "+tipPercentage;
+        finalMessage+="\nSales Tax:"+(taxPercentage*amount);
+        finalMessage+="\nTip: "+(tipPercentage*amount);
         finalMessage+="\nGrand Total: "+total;
         showArea.setText(finalMessage);
 
